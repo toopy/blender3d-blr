@@ -17,7 +17,7 @@ class Blr(bpy.types.Operator):
     bl_options = {'REGISTER', 'UNDO'}
 
     def execute(self, context):
-        blr.cmd.run()
+        blr.cmd.run(context)
         return {'FINISHED'}
 
 def register():
