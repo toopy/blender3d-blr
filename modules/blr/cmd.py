@@ -10,16 +10,19 @@ logger = logging.getLogger(__name__)
 
 
 def build(context):
+
     logger.info('build')
+
     Floor0(context).build()
+
+    # for obj in bpy.data.objects:
+    #     obj.select = True
+    # bpy.ops.view3d.localview()
 
 
 def clean(context):
 
     logger.info('clean')
-
-    # mode object
-    # bpy.ops.object.mode_set(mode='OBJECT')
 
     # deselect all
     bpy.ops.object.select_all(action='DESELECT')

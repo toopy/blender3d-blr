@@ -55,5 +55,9 @@ class Watcher:
             callback=partial(reload_and_rebuild, context)
         )
 
-        self.__manager.add_watch(str(CUR_DIR), pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts'), pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children'),
+                                 pyinotify.IN_MODIFY)
