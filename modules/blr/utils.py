@@ -16,11 +16,12 @@ CUR_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
 
 
 def reload():
-    logger.info('reload')
     try:
-        for m in sys.modules:
-            if not m.startswith('blr'):
-                continue
+        modules_to_reload = [
+            m for m in sys.modules
+            if m.startswith('blr')
+        ]
+        for m in sorted(modules_to_reload, reverse=True):
             try:
                 imp.reload(sys.modules[m])
             except Exception as e_reload:
@@ -29,9 +30,9 @@ def reload():
         logger.warn('module iteration failed: %s', e_iter)
 
 
-def reload_and_rebuild(context, notifier):
+def reload_and_rebuild(context, notifier, operator='blr_floor0'):
     reload()
-    blr.cmd.rebuild(context)
+    blr.cmd.rebuild(context, operator=operator)
 
 
 class Watcher:
@@ -39,7 +40,7 @@ class Watcher:
     __manager = None
     __notifier = None
 
-    def watch(self, context):
+    def watch(self, context, operator='blr_floor0'):
 
         if self.__manager:
             return
@@ -52,7 +53,7 @@ class Watcher:
         self.__notifier = pyinotify.AsyncioNotifier(
             self.__manager,
             loop,
-            callback=partial(reload_and_rebuild, context)
+            callback=partial(reload_and_rebuild, context, operator=operator)
         )
 
         self.__manager.add_watch(str(CUR_DIR),
@@ -60,4 +61,12 @@ class Watcher:
         self.__manager.add_watch(str(CUR_DIR / 'parts'),
                                  pyinotify.IN_MODIFY)
         self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'entry_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'fireplace_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'saloon_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children'),
                                  pyinotify.IN_MODIFY)

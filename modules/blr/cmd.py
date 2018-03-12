@@ -5,19 +5,20 @@ import bmesh
 
 from .utils import Watcher
 from .parts import Floor0
+from .parts import Floor2
 
 logger = logging.getLogger(__name__)
 
 
-def build(context):
+def build(context, operator='blr_floor0'):
 
-    logger.info('build')
+    logger.info('build: %s', operator)
 
-    Floor0(context).build()
+    if operator.endswith('blr_all') or operator.endswith('blr_floor0'):
+        Floor0(context).build()
 
-    # for obj in bpy.data.objects:
-    #     obj.select = True
-    # bpy.ops.view3d.localview()
+    if operator.endswith('blr_all') or operator.endswith('blr_floor2'):
+        Floor2(context).build()
 
 
 def clean(context):
@@ -35,14 +36,14 @@ def clean(context):
         bpy.ops.object.delete()
 
 
-def rebuild(context):
+def rebuild(context, operator='blr_floor0'):
     clean(context)
-    build(context)
+    build(context, operator=operator)
 
 
-def run(context):
-    rebuild(context)
-    Watcher().watch(context)
+def run(context, operator):
+    rebuild(context, operator=operator.bl_idname)
+    Watcher().watch(context, operator=operator.bl_idname)
 
 
 __all__ = (
