@@ -1,7 +1,6 @@
 import logging
 
 import bpy
-import bmesh
 
 from .utils import Watcher
 from .parts import Floor0
@@ -14,11 +13,17 @@ def build(context, operator='blr_floor0'):
 
     logger.info('build: %s', operator)
 
-    if operator.endswith('blr_all') or operator.endswith('blr_floor0'):
-        Floor0(context).build()
+    floor0 = Floor0(context)
+    floor2 = Floor2(context)
 
-    if operator.endswith('blr_all') or operator.endswith('blr_floor2'):
-        Floor2(context).build()
+    if operator.endswith('blr_all'):
+        floor0.build()
+        floor2.position = (0., 0., 6.4)
+        floor2.build()
+    elif operator.endswith('blr_floor0'):
+        floor0.build()
+    elif operator.endswith('blr_floor2'):
+        floor2.build()
 
 
 def clean(context):

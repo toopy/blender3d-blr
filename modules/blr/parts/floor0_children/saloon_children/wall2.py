@@ -1,20 +1,16 @@
 from ...mixins import Part
+from ...mixins import DEFAULT_COLOR
 
 
 class Wall2(Part):
 
-    color = (
-        .8,
-        .8,
-        .8,
-    )
+    color = DEFAULT_COLOR
     name = 'Wall2'
     position = (
         2.95,
         0.,
         0.,
     )
-
 
     @property
     def verts(self):

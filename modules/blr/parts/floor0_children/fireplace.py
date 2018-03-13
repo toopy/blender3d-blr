@@ -10,5 +10,14 @@ class Fireplace(Part):
         Floor,
         Wall0,
     )
-
+    color = (
+        .8,
+        .8,
+        .0,
+    )
     name = 'Fireplace'
+    position = (
+        0.,
+        3.2,
+        0.,
+    )

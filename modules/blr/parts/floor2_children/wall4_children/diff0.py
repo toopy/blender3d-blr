@@ -5,15 +5,10 @@ class Diff0(Part):
 
     is_diff = True
     name = 'Diff0'
-    position = (
-        -.1,
-        .02,
-        .02,
-    )
     translate = (
-        0.8,
         0.,
         0.,
+        1.,
     )
 
     @property
@@ -21,10 +16,10 @@ class Diff0(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0., 0.,  0.],
-                [0., 0.,  3.16],
+                [-0.1, 0., 2.8],
+                [-0.1, 4., 0.],
                 # >
-                [0., 1.46, 3.16],
-                [0., 1.46, 0.],
+                [3.,   4., 0.],
+                [3.,   0., 2.8],
             )
         return self._verts

@@ -1,15 +1,8 @@
 from ..mixins import Part
 
-from .entry_children import Wall0
-from .entry_children import Wall1
-
 
 class Entry(Part):
 
-    children = (
-        # Wall0,
-        # Wall1,
-    )
     color = (
         .8,
         .8,

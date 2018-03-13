@@ -1,13 +1,10 @@
 from ...mixins import Part
+from ...mixins import DEFAULT_COLOR
 
 
 class Wall1(Part):
 
-    color = (
-        .8,
-        .8,
-        .8,
-    )
+    color = DEFAULT_COLOR
     name = 'Wall1'
     position = (
         0.,

@@ -68,5 +68,21 @@ class Watcher:
                                  pyinotify.IN_MODIFY)
         self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'saloon_children'),
                                  pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'wood0_children'),
+                                 pyinotify.IN_MODIFY)
         self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'canopy0_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall1_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall2_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall3_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall4_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall5_children'),
+                                 pyinotify.IN_MODIFY)
+        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall6_children'),
                                  pyinotify.IN_MODIFY)
