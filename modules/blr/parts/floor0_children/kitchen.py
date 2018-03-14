@@ -1,8 +1,29 @@
 from ..mixins import Part
 
+from .kitchen_children import Canopy0
+from .kitchen_children import Shelf0
+from .kitchen_children import Shelf1
+from .kitchen_children import Shelf2
+from .kitchen_children import Shelf3
+from .kitchen_children import Smeg
+from .kitchen_children import Wall0
+from .kitchen_children import Wall1
+from .kitchen_children import Wall2
+
 
 class Kitchen(Part):
 
+    children = (
+        Canopy0,
+        Shelf0,
+        Shelf1,
+        Shelf2,
+        Shelf3,
+        Smeg,
+        Wall0,
+        Wall1,
+        Wall2,
+    )
     name = 'Kitchen'
     position = (
         3.,

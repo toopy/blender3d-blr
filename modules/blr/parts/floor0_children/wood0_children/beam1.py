@@ -12,7 +12,7 @@ class Beam1(Part):
     translate = (
         0.,
         0.,
-        3.2,
+        3.,
     )
 
     @property

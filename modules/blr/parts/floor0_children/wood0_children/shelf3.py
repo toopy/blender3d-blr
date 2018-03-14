@@ -7,7 +7,7 @@ class Shelf3(Part):
     position = (
         0.,
         .02,
-        2.4,
+        2.03,
     )
     translate = (
         0.,
@@ -20,10 +20,10 @@ class Shelf3(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0., 0.,  0.],
-                [0., 1.16, 0.],
+                [0., 0.,    0.],
+                [0., 1.16,  0.],
                 # >
                 [0.4, 1.16, 0.],
-                [0.4, 0.,  0.],
+                [0.4, 0.,   0.],
             )
         return self._verts

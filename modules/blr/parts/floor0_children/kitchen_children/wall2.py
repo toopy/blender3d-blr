@@ -1,12 +1,12 @@
 from ...mixins import Part
 
 
-class Beam0(Part):
+class Wall2(Part):
 
-    name = 'Beam0'
+    name = 'Wall2'
     position = (
-        .15,
-        0.,
+        2.3,
+        2.7,
         0.,
     )
     translate = (
@@ -20,10 +20,10 @@ class Beam0(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0., 0., 0.],
-                [0., .1, 0.],
-                # >
-                [.1, .1, 0.],
-                [.1, 0., 0.],
+                [0.,  0., 0.],
+                [0.,  .1, 0.],
+                # ^
+                [.7, .1, 0.],
+                [.7, 0., 0.],
             )
         return self._verts

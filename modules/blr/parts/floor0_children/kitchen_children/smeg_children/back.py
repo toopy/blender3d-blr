@@ -1,18 +1,18 @@
-from ...mixins import Part
+from ....mixins import Part
 
 
-class Beam0(Part):
+class Back(Part):
 
-    name = 'Beam0'
+    name = 'Back'
     position = (
-        .15,
+        0.07,
         0.,
         0.,
     )
     translate = (
         0.,
         0.,
-        3.,
+        1.68,
     )
 
     @property
@@ -20,10 +20,10 @@ class Beam0(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0., 0., 0.],
-                [0., .1, 0.],
-                # >
-                [.1, .1, 0.],
-                [.1, 0., 0.],
+                [0.,  0., 0.],
+                [0.,  .6, 0.],
+                # ^
+                [.65, .6, 0.],
+                [.65, 0., 0.],
             )
         return self._verts

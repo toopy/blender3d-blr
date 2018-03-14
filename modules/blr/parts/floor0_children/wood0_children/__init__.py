@@ -5,6 +5,7 @@ from .shelf1 import Shelf1
 from .shelf2 import Shelf2
 from .shelf3 import Shelf3
 from .shelf4 import Shelf4
+from .shelf5 import Shelf5
 
 
 __all__ = (
@@ -15,4 +16,5 @@ __all__ = (
     'Shelf2',
     'Shelf3',
     'Shelf4',
+    'Shelf5',
 )

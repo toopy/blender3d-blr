@@ -7,7 +7,7 @@ class Shelf4(Part):
     position = (
         0.,
         .02,
-        2.8,
+        2.38,
     )
     translate = (
         0.,

@@ -7,6 +7,7 @@ from .wood0_children import Shelf1
 from .wood0_children import Shelf2
 from .wood0_children import Shelf3
 from .wood0_children import Shelf4
+from .wood0_children import Shelf5
 
 
 class Wood0(Part):
@@ -19,6 +20,7 @@ class Wood0(Part):
         Shelf2,
         Shelf3,
         Shelf4,
+        Shelf5,
     )
     color = (
         .9,

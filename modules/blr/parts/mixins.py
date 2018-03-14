@@ -201,10 +201,7 @@ class Part:
 
     def move(self, pos):
         if self.parent:
-            rel_pos = [
-                self.parent.position[i] + v
-                for i, v in enumerate(self.position)
-            ]
+            rel_pos = self.parent.move(self.position)
         else:
             rel_pos = self.position
         return [rel_pos[i] + v for i, v in enumerate(pos)]
