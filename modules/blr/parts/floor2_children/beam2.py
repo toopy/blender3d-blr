@@ -1,23 +1,23 @@
 from ..mixins import Part
 
-from .wall5_children import Diff0
 
+class Beam2(Part):
 
-class Wall5(Part):
-
-    children = (
-        Diff0,
+    color = (
+        .5,
+        .3,
+        .0,
     )
-    name = 'Wall5'
+    name = 'Beam2'
     position = (
-        3.05,
-        4.,
+        0.5,
+        6.25,
         0.,
     )
     translate = (
         0.,
         0.,
-        1.5,
+        .38,
     )
 
     @property
@@ -25,10 +25,10 @@ class Wall5(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0.,   2.75,  0.],
-                [0.,   2.95,  0.],
+                [0., 0.,    0.],
+                [0., 0.05,  0.],
                 # >
-                [2.95, 2.95,  0.],
-                [2.95, 2.75,  0.],
+                [.05, 0.05, 0.],
+                [.05, 0.,   0.],
             )
         return self._verts
