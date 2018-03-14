@@ -1,12 +1,24 @@
 from ..mixins import Part
 
-from .wood0_children import Diff0
+from .wood0_children import Beam0
+from .wood0_children import Beam1
+from .wood0_children import Shelf0
+from .wood0_children import Shelf1
+from .wood0_children import Shelf2
+from .wood0_children import Shelf3
+from .wood0_children import Shelf4
 
 
 class Wood0(Part):
 
     children = (
-        Diff0,
+        Beam0,
+        Beam1,
+        Shelf0,
+        Shelf1,
+        Shelf2,
+        Shelf3,
+        Shelf4,
     )
     color = (
         .9,
@@ -15,25 +27,7 @@ class Wood0(Part):
     )
     name = 'Wood0'
     position = (
-        2.7,
+        2.8,
         2.,
         0.,
     )
-    translate = (
-        0.6,
-        0.,
-        0.,
-    )
-
-    @property
-    def verts(self):
-        if not self._verts:
-            self._verts = (
-                # .
-                [0., 0.,  0.],
-                [0., 0.,  3.2],
-                # >
-                [0., 1.5, 3.2],
-                [0., 1.5, 0.],
-            )
-        return self._verts

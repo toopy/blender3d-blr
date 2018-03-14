@@ -1,5 +1,6 @@
 import logging
 from math import hypot
+from math import pi
 
 import bpy
 import bmesh
@@ -15,6 +16,7 @@ DEFAULT_COLOR = (
 
 class Part:
 
+    angle = None
     children = None
     color = None
     is_diff = False
@@ -131,6 +133,8 @@ class Part:
             self.obj.active_material = self.material
             # extrude
             self.extrude()
+            # rotate
+            self.rotate()
             # deselect
             self.obj.select = False
 
@@ -204,3 +208,15 @@ class Part:
         else:
             rel_pos = self.position
         return [rel_pos[i] + v for i, v in enumerate(pos)]
+
+    def rotate(self):
+
+        if not self.angle:
+            return
+
+        bpy.context.scene.cursor_location = self.obj.location
+        bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY')
+
+        self.obj.rotation_euler = [
+            v * (pi / 180.) for v in self.angle
+        ]

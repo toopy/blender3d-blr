@@ -1,19 +1,18 @@
 from ...mixins import Part
 
 
-class Diff0(Part):
+class Shelf3(Part):
 
-    is_diff = True
-    name = 'Diff0'
+    name = 'Shelf3'
     position = (
-        -.1,
+        0.,
         .02,
-        .02,
+        2.4,
     )
     translate = (
-        0.8,
         0.,
         0.,
+        0.02,
     )
 
     @property
@@ -22,9 +21,9 @@ class Diff0(Part):
             self._verts = (
                 # .
                 [0., 0.,  0.],
-                [0., 0.,  3.16],
+                [0., 1.16, 0.],
                 # >
-                [0., 1.46, 3.16],
-                [0., 1.46, 0.],
+                [0.4, 1.16, 0.],
+                [0.4, 0.,  0.],
             )
         return self._verts
