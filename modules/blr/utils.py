@@ -3,7 +3,6 @@ import logging
 import os
 import sys
 from functools import partial
-from pathlib import Path
 
 import blender_async
 import pyinotify
@@ -12,7 +11,7 @@ import blr
 
 logger = logging.getLogger(__name__)
 
-CUR_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
+CUR_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def reload():
@@ -56,37 +55,7 @@ class Watcher:
             callback=partial(reload_and_rebuild, context, operator=operator)
         )
 
-        self.__manager.add_watch(str(CUR_DIR),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'fireplace_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'kitchen_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'kitchen_children' / 'canopy0_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'kitchen_children' / 'smeg_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'saloon_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor0_children' / 'wood0_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'canopy0_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall1_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall2_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall3_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall4_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall5_children'),
-                                 pyinotify.IN_MODIFY)
-        self.__manager.add_watch(str(CUR_DIR / 'parts' / 'floor2_children' / 'wall6_children'),
-                                 pyinotify.IN_MODIFY)
+        for cur_dir, _, _ in os.walk(CUR_DIR):
+            if cur_dir.endswith('__'):
+                continue
+            self.__manager.add_watch(cur_dir, pyinotify.IN_MODIFY)

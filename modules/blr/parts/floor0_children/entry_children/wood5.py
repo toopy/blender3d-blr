@@ -1,20 +1,25 @@
 from ...constants import WOOD_COLOR
 from ...mixins import Part
 
+from .wood5_children import Diff0
 
-class Shelf3(Part):
 
+class Wood5(Part):
+
+    children = (
+        Diff0,
+    )
     color = WOOD_COLOR
-    name = 'Shelf3'
+    name = 'Wood5'
     position = (
-        2.32,
-        2.8,
-        2.59,
+        -.4,
+        1.5,
+        0.,
     )
     translate = (
         0.,
         0.,
-        .02,
+        .4,
     )
 
     @property
@@ -22,10 +27,10 @@ class Shelf3(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0., 0., 0.],
-                [0., .6, 0.],
-                # ^
-                [.68, .6, 0.],
-                [.68, 0., 0.],
+                [0.,   0., 0.],
+                [0.,   .5, 0.],
+                # >
+                [0.5,  .5, 0.],
+                [0.5,  0., 0.],
             )
         return self._verts

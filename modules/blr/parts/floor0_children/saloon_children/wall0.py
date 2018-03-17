@@ -1,5 +1,5 @@
+from ...constants import DEFAULT_COLOR
 from ...mixins import Part
-from ...mixins import DEFAULT_COLOR
 
 
 class Wall0(Part):

@@ -6,7 +6,6 @@ from .fix2 import Fix2
 from .kitchen import Kitchen
 from .saloon import Saloon
 from .wc import Wc
-from .wood0 import Wood0
 
 
 __all__ = (
@@ -18,5 +17,4 @@ __all__ = (
     'Kitchen',
     'Saloon',
     'Wc',
-    'Wood0',
 )

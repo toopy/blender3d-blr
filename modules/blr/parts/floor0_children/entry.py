@@ -1,8 +1,23 @@
 from ..mixins import Part
 
+from .entry_children import Wood0
+from .entry_children import Wood1
+from .entry_children import Wood2
+from .entry_children import Wood3
+from .entry_children import Wood4
+from .entry_children import Wood5
+
 
 class Entry(Part):
 
+    children = (
+        Wood0,
+        Wood1,
+        Wood2,
+        Wood3,
+        Wood4,
+        Wood5,
+    )
     color = (
         .8,
         .8,

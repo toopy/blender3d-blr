@@ -5,13 +5,10 @@ from math import pi
 import bpy
 import bmesh
 
-logger = logging.getLogger(__name__)
+from .constants import DEFAULT_COLOR
 
-DEFAULT_COLOR = (
-    .5,
-    .5,
-    .5,
-)
+
+logger = logging.getLogger(__name__)
 
 
 class Part:

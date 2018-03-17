@@ -1,11 +1,13 @@
+from ...constants import WOOD_COLOR
 from ...mixins import Part
 
 
 class Shelf0(Part):
 
+    color = WOOD_COLOR
     name = 'Shelf0'
     position = (
-        2.3,
+        2.32,
         2.8,
         1.7,
     )
@@ -23,7 +25,7 @@ class Shelf0(Part):
                 [0., 0., 0.],
                 [0., .6, 0.],
                 # ^
-                [.7, .6, 0.],
-                [.7, 0., 0.],
+                [.68, .6, 0.],
+                [.68, 0., 0.],
             )
         return self._verts

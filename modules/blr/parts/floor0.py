@@ -6,7 +6,6 @@ from .floor0_children import Fix2
 from .floor0_children import Kitchen
 from .floor0_children import Saloon
 from .floor0_children import Wc
-from .floor0_children import Wood0
 from .mixins import Part
 
 
@@ -21,6 +20,5 @@ class Floor0(Part):
         Kitchen,
         Saloon,
         Wc,
-        Wood0,
     )
     name = 'Floor0'
