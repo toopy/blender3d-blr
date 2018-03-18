@@ -1,18 +1,18 @@
-from ....mixins import Part
+from .....mixins import Part
 
 
 class Back(Part):
 
     name = 'Back'
     position = (
-        0.15,
-        0.,
-        0.,
+        .59,
+        .0,
+        .80,
     )
     translate = (
         0.,
         0.,
-        1.68,
+        .05,
     )
 
     @property
@@ -20,10 +20,10 @@ class Back(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0.,  0., 0.],
-                [0.,  .6, 0.],
-                # ^
-                [.65, .6, 0.],
-                [.65, 0., 0.],
+                [0.,   0.,  0.],
+                [0.,   .7, 0.],
+                # >
+                [0.01, .7, 0.],
+                [0.01, 0.,  0.],
             )
         return self._verts

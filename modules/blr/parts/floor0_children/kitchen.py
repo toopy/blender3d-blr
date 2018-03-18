@@ -1,34 +1,76 @@
 from ..mixins import Part
 
-# from .kitchen_children import Canopy0
+from .kitchen_children import Basin
+from .kitchen_children import Canopy0
+from .kitchen_children import Dishwasher
 from .kitchen_children import Door0
 from .kitchen_children import Door1
+from .kitchen_children import Door2
+from .kitchen_children import Door3
+from .kitchen_children import Piano
 from .kitchen_children import Shelf0
 from .kitchen_children import Shelf1
 from .kitchen_children import Shelf2
 from .kitchen_children import Shelf3
+from .kitchen_children import Shelf4
+from .kitchen_children import Shelf5
+from .kitchen_children import Shelf6
+from .kitchen_children import Shelf7
+from .kitchen_children import Shelf8
+from .kitchen_children import Shelf9
+from .kitchen_children import Shelf10
+from .kitchen_children import Shelf11
+from .kitchen_children import Shelf12
+from .kitchen_children import Shelf13
 from .kitchen_children import Smeg
 from .kitchen_children import Wall0
 from .kitchen_children import Wall1
 from .kitchen_children import Wall2
+from .kitchen_children import Wall3
+from .kitchen_children import Wall4
 from .kitchen_children import Wood0
+from .kitchen_children import Wood1
+from .kitchen_children import Wood2
+from .kitchen_children import Wood3
+from .kitchen_children import Wood4
 
 
 class Kitchen(Part):
 
     children = (
-        # Canopy0,
+        Basin,
+        Canopy0,
+        Dishwasher,
         Door0,
         Door1,
+        Door2,
+        Door3,
+        Piano,
         Shelf0,
         Shelf1,
         Shelf2,
         Shelf3,
+        Shelf4,
+        Shelf5,
+        Shelf6,
+        Shelf7,
+        Shelf8,
+        Shelf9,
+        Shelf10,
+        Shelf11,
+        Shelf12,
+        Shelf13,
         Smeg,
         Wall0,
         Wall1,
         Wall2,
+        Wall3,
+        Wall4,
         Wood0,
+        Wood1,
+        Wood2,
+        Wood3,
+        Wood4,
     )
     name = 'Kitchen'
     position = (

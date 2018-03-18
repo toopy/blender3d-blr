@@ -7,13 +7,13 @@ class Diff1(Part):
     name = 'Diff1'
     position = (
         -.02,
-        .67,
-        .06,
+        .525,
+        .025,
     )
     translate = (
         0.,
         0.,
-        1.88,
+        1.85,
     )
 
     @property
@@ -22,9 +22,9 @@ class Diff1(Part):
             self._verts = (
                 # .
                 [0,  0.,   0.],
-                [0,  0.55, 0.],
+                [0,  0.45, 0.],
                 # >
-                [.1, .55, 0.],
+                [.1, .45, 0.],
                 [.1, 0.,  0.],
             )
         return self._verts

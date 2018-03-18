@@ -21,14 +21,14 @@ class Canopy0(Part):
     )
     name = 'Canopy0'
     position = (
-        0.02,
-        0.,
-        1.,
+        -0.03,
+        0.5,
+        1.1,
     )
     translate = (
         0.,
         0.,
-        2.,
+        1.9,
     )
 
     @property
@@ -36,10 +36,10 @@ class Canopy0(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0.,   0.,   0.],
-                [0.,   2.5,  0.],
+                [0.,   0.,  0.],
+                [0.,   2.,  0.],
                 # >
-                [0.06, 2.5,  0.],
-                [0.06, 0.,   0.],
+                [0.06, 2.,  0.],
+                [0.06, 0.,  0.],
             )
         return self._verts

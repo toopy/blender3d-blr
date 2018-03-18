@@ -1,19 +1,19 @@
-from ....mixins import Part
+from .....mixins import Part
 
 
-class Diff0(Part):
+class Diff1(Part):
 
     is_diff = True
-    name = 'Diff0'
+    name = 'Diff1'
     position = (
-        -.02,
-        .025,
-        .025,
+        .01,
+        .01,
+        .79,
     )
     translate = (
         0.,
         0.,
-        1.85,
+        .02,
     )
 
     @property
@@ -21,10 +21,10 @@ class Diff0(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0,  0.,   0.],
-                [0,  0.45, 0.],
+                [0.,   0.,  0.],
+                [0.,   .68, 0.],
                 # >
-                [.1, .45, 0.],
-                [.1, 0.,  0.],
+                [0.57, .68, 0.],
+                [0.57, 0.,  0.],
             )
         return self._verts

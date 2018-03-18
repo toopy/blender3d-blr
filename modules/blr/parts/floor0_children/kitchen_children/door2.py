@@ -2,14 +2,14 @@ from ...constants import WOOD_COLOR
 from ...mixins import Part
 
 
-class Door1(Part):
+class Door2(Part):
 
     color = WOOD_COLOR
-    name = 'Door1'
+    name = 'Door2'
     position = (
-        2.4,
-        2.805,
-        2.415,
+        2.65,
+        2.105,
+        2.055,
     )
     translate = (
         0.,

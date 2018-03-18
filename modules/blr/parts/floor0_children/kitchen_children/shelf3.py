@@ -7,9 +7,9 @@ class Shelf3(Part):
     color = WOOD_COLOR
     name = 'Shelf3'
     position = (
-        2.32,
+        2.42,
         2.8,
-        2.59,
+        2.75,
     )
     translate = (
         0.,
@@ -25,7 +25,7 @@ class Shelf3(Part):
                 [0., 0., 0.],
                 [0., .6, 0.],
                 # ^
-                [.68, .6, 0.],
-                [.68, 0., 0.],
+                [.58, .6, 0.],
+                [.58, 0., 0.],
             )
         return self._verts

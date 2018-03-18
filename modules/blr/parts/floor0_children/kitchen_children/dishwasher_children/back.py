@@ -1,20 +1,18 @@
-from ...constants import WOOD_COLOR
-from ...mixins import Part
+from ....mixins import Part
 
 
-class Shelf2(Part):
+class Back(Part):
 
-    color = WOOD_COLOR
-    name = 'Shelf2'
+    name = 'Back'
     position = (
-        2.42,
-        2.8,
-        2.4,
+        0.02,
+        0.,
+        0.,
     )
     translate = (
         0.,
         0.,
-        .02,
+        .85,
     )
 
     @property
