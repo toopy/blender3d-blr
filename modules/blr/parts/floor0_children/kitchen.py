@@ -7,6 +7,9 @@ from .kitchen_children import Door0
 from .kitchen_children import Door1
 from .kitchen_children import Door2
 from .kitchen_children import Door3
+from .kitchen_children import Door4
+from .kitchen_children import Door5
+from .kitchen_children import Door6
 from .kitchen_children import Piano
 from .kitchen_children import Shelf0
 from .kitchen_children import Shelf1
@@ -22,6 +25,11 @@ from .kitchen_children import Shelf10
 from .kitchen_children import Shelf11
 from .kitchen_children import Shelf12
 from .kitchen_children import Shelf13
+from .kitchen_children import Shelf14
+from .kitchen_children import Shelf15
+from .kitchen_children import Shelf16
+from .kitchen_children import Shelf17
+from .kitchen_children import Shelf18
 from .kitchen_children import Smeg
 from .kitchen_children import Wall0
 from .kitchen_children import Wall1
@@ -31,8 +39,6 @@ from .kitchen_children import Wall4
 from .kitchen_children import Wood0
 from .kitchen_children import Wood1
 from .kitchen_children import Wood2
-from .kitchen_children import Wood3
-from .kitchen_children import Wood4
 
 
 class Kitchen(Part):
@@ -45,6 +51,9 @@ class Kitchen(Part):
         Door1,
         Door2,
         Door3,
+        Door4,
+        Door5,
+        Door6,
         Piano,
         Shelf0,
         Shelf1,
@@ -60,6 +69,11 @@ class Kitchen(Part):
         Shelf11,
         Shelf12,
         Shelf13,
+        Shelf14,
+        Shelf15,
+        Shelf16,
+        Shelf17,
+        Shelf18,
         Smeg,
         Wall0,
         Wall1,
@@ -69,8 +83,6 @@ class Kitchen(Part):
         Wood0,
         Wood1,
         Wood2,
-        Wood3,
-        Wood4,
     )
     name = 'Kitchen'
     position = (

@@ -2,13 +2,13 @@ from ...constants import WOOD_COLOR
 from ...mixins import Part
 
 
-class Door3(Part):
+class Door5(Part):
 
     color = WOOD_COLOR
-    name = 'Door3'
+    name = 'Door5'
     position = (
         2.65,
-        2.105,
+        0.,
         2.415,
     )
     translate = (
@@ -23,9 +23,9 @@ class Door3(Part):
             self._verts = (
                 # .
                 [0.,  0.,  0.],
-                [0.,  .59, 0.],
+                [0.,  1.2, 0.],
                 # ^
-                [.02, .59, 0.],
+                [.02, 1.2, 0.],
                 [.02, 0.,  0.],
             )
         return self._verts

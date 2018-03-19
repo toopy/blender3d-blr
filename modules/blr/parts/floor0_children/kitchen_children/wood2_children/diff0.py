@@ -7,7 +7,7 @@ class Diff0(Part):
     name = 'Diff0'
     position = (
         .05,
-        .1,
+        .015,
         -.01,
     )
     translate = (

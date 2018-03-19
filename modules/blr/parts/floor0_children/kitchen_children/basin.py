@@ -6,7 +6,7 @@ class Basin(Part):
     name = 'Basin'
     position = (
         2.45,
-        .1,
+        .015,
         .90,
     )
 
