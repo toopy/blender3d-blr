@@ -1,4 +1,4 @@
-from ...mixins import Part
+from blr.parts.mixins import Part
 
 from .smeg_children import Back
 from .smeg_children import Front0

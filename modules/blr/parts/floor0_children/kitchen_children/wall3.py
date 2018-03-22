@@ -1,18 +1,13 @@
-from ...mixins import Part
+from blr.parts.mixins import Part
 
 
 class Wall3(Part):
 
     name = 'Wall3'
     position = (
-        2.4,
-        2.,
-        0.,
-    )
-    translate = (
+        1.4,
         0.,
         0.,
-        .85,
     )
 
     @property
@@ -21,9 +16,9 @@ class Wall3(Part):
             self._verts = (
                 # .
                 [0.,  0., 0.],
-                [0.,  .1, 0.],
+                [0.,  0., 3.],
                 # ^
-                [.6, .1, 0.],
-                [.6, 0., 0.],
+                [1.6, 0., 3.],
+                [1.6, 0., 0.],
             )
         return self._verts

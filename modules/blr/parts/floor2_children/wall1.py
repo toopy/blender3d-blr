@@ -1,4 +1,5 @@
-from ..mixins import Part
+from blr.parts.mixins import Part
+
 from .wall1_children import Diff0
 
 

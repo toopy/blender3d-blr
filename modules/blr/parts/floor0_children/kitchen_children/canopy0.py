@@ -1,4 +1,4 @@
-from ...mixins import Part
+from blr.parts.mixins import Part
 
 from .canopy0_children import Diff0
 from .canopy0_children import Diff1

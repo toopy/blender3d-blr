@@ -1,4 +1,4 @@
-from ..mixins import Part
+from blr.parts.mixins import Part
 
 from .fireplace_children import Floor
 from .fireplace_children import Wall0

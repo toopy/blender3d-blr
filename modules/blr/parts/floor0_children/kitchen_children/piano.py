@@ -1,18 +1,16 @@
-from ...mixins import Part
+from blr.parts.mixins import Part
 
-from .piano_children import Oven
+from .piano_children import Back
+from .piano_children import Diff0
+from .piano_children import Diff1
 
 
 class Piano(Part):
 
     children = (
-        # Door0,
-        # Foot0,
-        # Foot1,
-        # Foot2,
-        # Foot2,
-        Oven,
-        # Plate,
+        Back,
+        Diff0,
+        Diff1,
     )
     color = (
         1.,
@@ -23,5 +21,23 @@ class Piano(Part):
     position = (
         2.4,
         1.3,
-        0.,
+        .1,
     )
+    translate = (
+        0.,
+        0.,
+        .8,
+    )
+
+    @property
+    def verts(self):
+        if not self._verts:
+            self._verts = (
+                # .
+                [0,  0., 0.],
+                [0,  .7, 0.],
+                # >
+                [.6, .7, 0.],
+                [.6, 0., 0.],
+            )
+        return self._verts

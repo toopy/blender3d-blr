@@ -1,4 +1,4 @@
-from ....mixins import Part
+from blr.parts.mixins import Part
 
 
 class Diff1(Part):

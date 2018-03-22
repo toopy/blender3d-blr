@@ -1,4 +1,4 @@
-from ..mixins import Part
+from blr.parts.mixins import Part
 
 
 class Beam3(Part):

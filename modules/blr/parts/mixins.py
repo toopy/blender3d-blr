@@ -82,7 +82,7 @@ class Part:
     @property
     def mesh(self):
         if not self._mesh and self.faces and self.verts:
-            self._mesh = bpy.data.meshes.new(self.name)
+            self._mesh = bpy.data.meshes.new(self.fullname)
             self._mesh.from_pydata(
                 [self.move(p) for p in self.verts],
                 [],
@@ -93,7 +93,7 @@ class Part:
     @property
     def obj(self):
         if not self._obj and self.mesh:
-            self._obj = bpy.data.objects.new(self.name, self.mesh)
+            self._obj = bpy.data.objects.new(self.fullname, self.mesh)
             bpy.context.scene.objects.link(self._obj)
         return self._obj
 

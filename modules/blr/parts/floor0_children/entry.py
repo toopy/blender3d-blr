@@ -1,4 +1,4 @@
-from ..mixins import Part
+from blr.parts.mixins import Part
 
 from .entry_children import Wood0
 from .entry_children import Wood1
@@ -6,6 +6,10 @@ from .entry_children import Wood2
 from .entry_children import Wood3
 from .entry_children import Wood4
 from .entry_children import Wood5
+from .entry_children import Wood6
+from .entry_children import Wood7
+from .entry_children import Wood8
+from .entry_children import Wood9
 
 
 class Entry(Part):
@@ -17,6 +21,10 @@ class Entry(Part):
         Wood3,
         Wood4,
         Wood5,
+        Wood6,
+        Wood7,
+        Wood8,
+        Wood9,
     )
     color = (
         .8,

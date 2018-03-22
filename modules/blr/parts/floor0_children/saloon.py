@@ -1,4 +1,4 @@
-from ..mixins import Part
+from blr.parts.mixins import Part
 
 from .saloon_children import Wall0
 from .saloon_children import Wall1

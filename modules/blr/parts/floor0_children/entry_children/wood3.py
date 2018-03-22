@@ -1,5 +1,5 @@
-from ...constants import WOOD_COLOR
-from ...mixins import Part
+from blr.parts.constants import WOOD_COLOR
+from blr.parts.mixins import Part
 
 from .wood3_children import Diff0
 

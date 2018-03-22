@@ -1,5 +1,5 @@
-from ...constants import DEFAULT_COLOR
-from ...mixins import Part
+from blr.parts.constants import DEFAULT_COLOR
+from blr.parts.mixins import Part
 
 
 class Wall1(Part):

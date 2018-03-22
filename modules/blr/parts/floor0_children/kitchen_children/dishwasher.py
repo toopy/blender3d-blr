@@ -1,4 +1,4 @@
-from ...mixins import Part
+from blr.parts.mixins import Part
 
 from .dishwasher_children import Back
 from .dishwasher_children import Front
@@ -18,6 +18,6 @@ class Dishwasher(Part):
     name = 'Dishwasher'
     position = (
         2.4,
-        2.1,
+        .6,
         0.,
     )
