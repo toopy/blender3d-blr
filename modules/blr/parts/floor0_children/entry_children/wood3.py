@@ -12,8 +12,8 @@ class Wood3(Part):
     color = WOOD_COLOR
     name = 'Wood3'
     position = (
-        -.4,
-        0.,
+        -.35,
+        0.5,
         0.4,
     )
     translate = (
@@ -27,10 +27,10 @@ class Wood3(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0., .5,  0.],
-                [0., 1., 0.],
+                [0., 0.,  0.],
+                [0., .5, 0.],
                 # >
-                [.5, 1., 0.],
-                [.5, .5,  0.],
+                [.5, .5, 0.],
+                [.5, 0.,  0.],
             )
         return self._verts

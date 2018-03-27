@@ -12,7 +12,7 @@ class Wood9(Part):
     color = WOOD_COLOR
     name = 'Wood9'
     position = (
-        -.4,
+        -.35,
         1.,
         1.8,
     )
@@ -27,10 +27,10 @@ class Wood9(Part):
         if not self._verts:
             self._verts = (
                 # .
-                [0.,   0., 0.],
-                [0.,   1., 0.],
+                [0.,  0., 0.],
+                [0.,  1., 0.],
                 # >
-                [0.5,  1., 0.],
-                [0.5,  0., 0.],
+                [0.5, 1., 0.],
+                [0.5, 0., 0.],
             )
         return self._verts

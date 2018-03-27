@@ -12,7 +12,7 @@ class Wood5(Part):
     color = WOOD_COLOR
     name = 'Wood5'
     position = (
-        -.4,
+        -.35,
         1.5,
         0.,
     )

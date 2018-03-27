@@ -1,5 +1,9 @@
 from blr.parts.mixins import Part
 
+from .saloon_children import Block0
+from .saloon_children import Block1
+from .saloon_children import Block2
+from .saloon_children import Block3
 from .saloon_children import Wall0
 from .saloon_children import Wall1
 from .saloon_children import Wall2
@@ -8,6 +12,10 @@ from .saloon_children import Wall2
 class Saloon(Part):
 
     children = (
+        Block0,
+        Block1,
+        Block2,
+        Block3,
         Wall0,
         Wall1,
         Wall2,
